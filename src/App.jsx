@@ -381,7 +381,7 @@ export default function App() {
 
       {/* NAV */}
       <nav className="nav">
-        <div className="nav-logo">PP://portfolio</div>
+        <div className="nav-logo">PP://profile</div>
         <div className="nav-links">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
