@@ -29,8 +29,16 @@ const projects = [
     title: "Secure Banking System",
     tags: ["Microservices", "JWT", "OAuth2", "Spring Boot"],
     desc: "Enterprise-grade microservices banking platform featuring multi-layer JWT & OAuth2 authentication, RBAC enforcement, and hardened API architecture with audit logging.",
-    link: "https://github.com/prajjwal-cs",
+    link: "https://github.com/prajjwal-cs/secure-banking-api",
     accent: "#00e5ff",
+  },
+  {
+    title: "E-Commerce Microservices Platform",
+    tags: ["Spring Boot", "OAuth2", "JWT", "Kafka", "PostgreSQL", "Docker", "Kubernetes"],
+    desc: "Scalable e-commerce platform built on microservices architecture with OAuth2 Authorization Server and JWT-based security. Includes 6 independent services — User, Product, Cart, Order, Payment (Stripe/PayPal), and Notification (Twilio/SendGrid) — communicating via REST and Kafka events, all routed through a secure API Gateway with RBAC token validation.",
+    link: "https://github.com/prajjwal-cs/shopee",
+    accent: "#b47cff",
+    year: "2025",
   },
   {
     title: "Event-Driven Notification Service",
@@ -528,7 +536,15 @@ export default function App() {
                     )}
                   </div>
                   <div className="project-tags">
-                    {p.tags.map((t) => (... ))}
+                    {p.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="project-tag"
+                        style={{ background: `${p.accent}18`, color: p.accent, border: `1px solid ${p.accent}40` }}
+                      >
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
                 <p className="project-desc">{p.desc}</p>
